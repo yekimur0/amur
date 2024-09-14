@@ -1,0 +1,83 @@
+.steps {
+    margin-top: 160px;
+    @media(max-width: 1280px) {
+        margin-top: 120px;
+    }
+    @media(max-width: 768px) {
+        margin-top: 60px;
+    }
+    &__items {
+        display: flex;
+        gap: clamp(22px, 3vw, 60px);
+        @media(max-width: 1140px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media(max-width: 768px) {
+            gap: 70px;
+        }
+    }
+    &__header {
+        @media(max-width: 768px) {
+            margin-bottom: 100px;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 495px;
+        border: 2px solid var(--red);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        aspect-ratio: 1 / 1;
+        position: relative;
+        padding: 0 35px;
+        max-width: 495px;
+        @media(max-width: 1140px) {
+            flex: 1 1 345px;
+        }
+        &-number {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 108px;
+            line-height: 102%;
+            text-align: center;
+            color: var(--red);
+            background-color: var(--black);
+            padding: 0 20px;
+        }
+        &-title {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: clamp(20px, 2vw, 30px);
+            line-height: 103%;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        &-desc{
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: clamp(16px, 1vw, 22px);
+            line-height: 129%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            
+
+        }
+
+        &-btn {
+            display: flex;
+            max-width: 250px;
+            width: 100%;
+            justify-content: center;
+            margin-top: 32px;
+        }
+    }
+}

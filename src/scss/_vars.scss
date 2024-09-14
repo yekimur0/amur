@@ -1,0 +1,13 @@
+:root {
+  // base
+  --font-family: "TT Mussels", sans-serif;
+  --content-width: 1620px;
+  --container-offset: 10px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --red: #d80024;
+	--black: #050703;
+	--white: #fff;
+	--hover-button: #9c1929;
+}

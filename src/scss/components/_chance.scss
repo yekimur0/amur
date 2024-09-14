@@ -1,0 +1,108 @@
+.chance {
+    margin-top: 160px;
+    @media(max-width: 1280px) {
+        margin-top: 120px;
+    }
+    @media(max-width: 768px) {
+        margin-top: 60px;
+    }
+    &__header {
+        margin-bottom: 40px;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    &__item {
+        flex: 1 1 45%;
+        border: 1px solid var(--red);
+        border-radius: 20px;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media(max-width: 1140px) {
+            flex: 1 1 auto;
+        }
+        @media(max-width: 768px) {
+            gap: 16px;
+            padding: 20px 12px;
+        }
+        &-step {
+            display: flex;
+            align-items: center;
+            gap: clamp(20px, 3vw, 50px);
+            
+        }
+        &-number {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: clamp(74px,6vw,108px);
+            line-height: 102%;
+            text-align: center;
+            color: var(--white);
+        }
+        &-title {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 103%;
+            color: var(--white);
+            @media(max-width: 1280px) {
+                font-size: 20px;
+            }
+        }
+        &-content {
+            max-width: 720px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        &-desc {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: clamp(14px, 1vw, 24px);
+            line-height: 129%;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    &__bottom {
+        margin-top: 40px;
+        display: flex;
+        justify-content: end;
+        &-text {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: clamp(14px, 1.5vw, 24px);
+            line-height: 129%;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 790px;
+            border-left: 6px solid var(--red);
+            padding-left: 30px;
+            @media(max-width: 768px) {
+                border-left: 3px solid var(--red);
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+.item--big {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media(max-width: 992px) {
+        flex-direction: column;
+    }
+}
+
+.item--accent {
+    background-color: var(--red);
+}
+
+.item--accent .chance__item-desc {
+    color: var(--white);
+}
