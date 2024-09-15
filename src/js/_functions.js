@@ -103,10 +103,10 @@ new TransferElements({
 // const rellax = new Rellax('.rellax');
 
 // Подключение плавной прокрутки к якорям
-// import SmoothScroll from "smooth-scroll";
-// const scroll = new SmoothScroll('a[href*="#"]', {
-//   header: "[data-scroll-header]",
-// });
+import SmoothScroll from "smooth-scroll";
+const scroll = new SmoothScroll('a[href*="#"]', {
+  header: "[data-scroll-header]",
+});
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
@@ -129,3 +129,45 @@ import { accordion } from "./functions/accordion";
 import { MY_SELECT } from "./functions/my-select";
 import { listener } from "./functions/listener";
 import { auto } from "@popperjs/core";
+
+
+// listener глобальный (перенести в отдельный компонент (listener) стоит попозже)
+document.body.addEventListener('click', (e) => {
+    let target = e.target;
+
+    // открытие модалки
+    if(target.hasAttribute('data-btn-modal')) openModal(target);
+
+    // закрытие модалки
+    if(target.classList.contains('modal') || target.hasAttribute('close-modal-btn')) {
+        let parent = target.closest('.modal');
+        
+        // modal--active ? remove : null;
+        if (parent.classList.contains('modal--active')) {
+            parent.classList.remove('modal--active');
+            return;
+        }
+
+    }
+})
+
+
+function openModal() {
+    const modal = document.querySelector('#modal-register');
+
+    modal.classList.add('modal--active');
+}
+
+const forms = document.querySelector('form');
+
+forms.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const modal = e.target.closest('.modal');
+    const successModal = document.querySelector('#modal-success');
+
+
+    modal.classList.remove('modal--active');
+    setTimeout(() => {
+        successModal.classList.add('modal--active')
+    }, 1000)
+})

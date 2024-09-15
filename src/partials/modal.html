@@ -1,0 +1,69 @@
+<div class="modal" id="modal-register">
+    <div class="modal__container">
+        <div class="modal__close">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L28 28M2 28L28 2" stroke="#050703" stroke-width="3" />
+          </svg>
+        </div>
+        <div class="modal__content">
+            <div class="modal__title">Регистрируйся и участвуй в розыгрыше квартиры</div>
+            <form action="" class="modal__form">
+                <div class="modal__form-block">
+                    <label class="modal__form-label" for="">Фамилия, Имя, Отчество</label>
+                    <input type="text" class="input-reset input" placeholder="Фамилия, Имя, Отчество">
+                </div>
+                <div class="modal__form-block">
+                    <label class="modal__form-label" for="">Контактный номер телефона</label>
+                    <input type="text" class="input-reset input" placeholder="+ 7 (999) 000 00 00">
+                </div>
+                <div class="modal__form-tripple">
+                    <div class="modal__form-block">
+                        <label class="modal__form-label" for="">Сектор <span>*</span></label>
+                        <input type="text" class="input-reset input" placeholder="2">
+                    </div>
+                    <div class="modal__form-block">
+                        <label class="modal__form-label" for="">Ряд <span>*</span></label>
+                        <input type="text" class="input-reset input" placeholder="14">
+                    </div>
+                    <div class="modal__form-block">
+                        <label class="modal__form-label" for="">Место <span>*</span></label>
+                        <input type="text" class="input-reset input" placeholder="316">
+                    </div>
+                    
+                </div> 
+                <div class="modal__form-text"><span>*</span> согласно билету/абонементу</div>
+                <button type="submit" class="btn-reset btn modal__form-btn">Отправить</button>
+                <div class="modal__form-policy">
+                    <input type="checkbox" class="input-checkbox">
+                    <a href="#">Я ознакомлен(а) и согласен(а) с Правилами проведения стимулирующего 
+                        мероприятия «Амур – Чемпион»
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal-success">
+    <div class="modal__container">
+        <div class="modal__close" close-modal-btn>
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L28 28M2 28L28 2" stroke="#050703" stroke-width="3"></path>
+          </svg>
+        </div>
+
+        <div class="modal__content modal__content-success">
+            <div class="modal__title"><span>Поздравляем!</span> Вы успешно зарегистрированы в розыгрыше квартиры</div>
+            <div class="number">
+                <div class="number__text">Ваш номер участника</div>
+                <div class="number__id">0000001</div>
+            </div>
+            <div class="modal__desc">
+                Запомните свой номер или сделайте скриншот экрана. Если вам повезёт
+                и в рандомайзере выпадет ваш номер, мы пригласим вас на лёд для участия в конкурсе на выход в полуфинал. Желаем удачи!
+            </div>
+
+            <button type="button" class="btn-reset btn modal__btn" close-modal-btn>Закрыть</button>
+        </div>
+    </div>
+</div>
